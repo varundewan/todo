@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* CSS Document * Varun Dewan 2019 */
+
+html, body{
+   padding:0px;
+   margin:0px;
+   background:#222;
+   font-family: 'Ubuntu', sans-serif;
+   color:#FFF;
+}
+h4{ text-align:center; }
+a{ color:white; }
+*, *:before, *:after{ box-sizing:border-box; }
+.container{
+   margin:auto;
+   max-width:400px;
+   min-height:300px;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+   background:#aaa;
+}
+
+header{
+   border-bottom:1px solid #444;
+   background:#444;
+   box-shadow:0px 2px 4px rgba(0, 0, 0, 0.5);
+   text-align:center;
+   font-size:24px;
+   padding:14px;
+}
+button{
+   width:50px;
+   background:#465;
+   border:0;
+   padding:0px;
+   margin:0px;
+   font-size:30px;
+   color:white;
+   transition:all 0.2s;
+   outline:none;
+}
+button:hover{
+   opacity:0.75;
+}
+.add{
+   display:flex;
+}
+
+.add input{
+   flex: 4;
+   width:100%;
+   padding:14px 10px;
+   font-size:16px;
+   border:none;
+   background:#456;
+   color:white;
+   outline:none;
+}
+
+.link {
+  text-align: center;
+  margin: 20px 0px;
+  color:#8CACD7;
+}
+
+
+.tasks .task{
+   display:flex;
+   overflow:hidden;
+   transition:all 0.5s;
+   max-height:100px;
+}
+.tasks .task[last=true]{
+   -webkit-animation: grow 1s;
+           animation: grow 1s;
+}
+.tasks .task.del{
+   max-height:0px;
+   background:#880f00!important;
+}
+@-webkit-keyframes grow{ from{max-height:0px; background:#465} to {max-height:100px;}}
+@keyframes grow{ from{max-height:0px; background:#465} to {max-height:100px;}}
+
+.tasks .task p{
+   flex:4;
+   padding:14px 8px;
+   margin:0px;
+}
+.tasks .task:hover{
+   background:#777;
+   cursor:pointer;
+}
+
+
+.tasks .task button{
+   background:#880f00;
+   overflow:hidden;
+   width:0px; 
+}
+
+.tasks .task:hover button,
+.tasks .task.del button{
+   width:50px;
+}
